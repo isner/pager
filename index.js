@@ -45,8 +45,8 @@ Pager.prototype.onclick = function(e){
   var el = o(e.target).parent();
   if (el.hasClass('prev')) return this.prev();
   if (el.hasClass('next')) return this.next();
-  var n = el.getAttribute('data-no');
-  this.show(n);
+  var n = el.attr('data-no');
+  if (n) this.show(n);
 };
 
 /**
