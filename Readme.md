@@ -39,6 +39,10 @@
 
   Re-render the pager.
 
+### Pager#focusActive()
+
+  Focus the active pager button.
+
 # License
 
   MIT

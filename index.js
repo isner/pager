@@ -239,3 +239,13 @@ Pager.prototype.render = function(){
   return this;
 };
 
+/**
+ * Apply focus to the currently active button.
+ *
+ * @api public
+ */
+
+Pager.prototype.focusActive = function () {
+  var active = this.el[2].find('li.pager-active');
+  console.log('active: ', active);
+};
