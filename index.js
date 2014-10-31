@@ -5,7 +5,8 @@
 
 var Emitter = require('emitter');
 var html = require('./template');
-var o = require('jquery');
+require('jquery');
+var o = window.jQuery;
 
 /**
  * Expose `Pager`.
