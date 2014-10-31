@@ -3,9 +3,9 @@
  * Module dependencies.
  */
 
-var Emitter = require('emitter')
-  , html = require('./template')
-  , o = require('jquery');
+var Emitter = require('emitter');
+var html = require('./template');
+var o = require('jquery');
 
 /**
  * Expose `Pager`.
@@ -89,7 +89,7 @@ Pager.prototype.next = function(){
 
 Pager.prototype.show = function(n){
   this.select(n);
-  this.emit('show', n)
+  this.emit('show', n);
   return this;
 };
 
@@ -143,8 +143,8 @@ Pager.prototype.total = function(n){
 Pager.prototype.createPageLink = function(i){
   var n = i + 1;
   return this.current == i
-    ? '<li class="pager-page pager-active"><a href="#">' + n + '</a></li>'
-    : '<li class="pager-page"><a href="#">' + n + '</a></li>';
+    ? '<li class="pager-page pager-active"><a href="#"><span class="clipped">current page </span>' + n + '</a></li>'
+    : '<li class="pager-page"><a href="#"><span class="clipped">page </span>' + n + '</a></li>';
 };
 
 /**
@@ -154,9 +154,9 @@ Pager.prototype.createPageLink = function(i){
  */
 
 Pager.prototype.render = function(){
-  var total = this._total;
+  var total = this._total; // not currently in use
   var curr = this.current;
-  var per = this._perpage;
+  var per = this._perpage; // not currently in use
   var pages = this.pages();
   var el = this.el;
   var prev = el.find('.prev');
@@ -227,11 +227,11 @@ Pager.prototype.render = function(){
   o(links).insertAfter(prev);
 
   // prev
-  if (curr) prev.removeClass('pager-hide')
+  if (curr) prev.removeClass('pager-hide');
   else prev.addClass('pager-hide');
 
   // next
-  if (curr < pages - 1) next.removeClass('pager-hide')
+  if (curr < pages - 1) next.removeClass('pager-hide');
   else next.addClass('pager-hide');
 
   return this;

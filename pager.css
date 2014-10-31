@@ -44,3 +44,11 @@
   margin: 0 2px;
   color: #2a2a2a;
 }
+
+.pager .clipped {
+  position: absolute !important;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
