@@ -10,10 +10,12 @@
   },
   "development": {},
   "scripts": [
-    "index.js",
-    "template.js"
+    "index.js"
   ],
   "styles": [
     "pager.css"
+  ],
+  "templates": [
+    "template.html"
   ]
 }
