@@ -47,7 +47,7 @@ Pager.prototype.onclick = function(e){
   if (el.hasClass('prev')) return this.prev();
   if (el.hasClass('next')) return this.next();
   var n = el.attr('data-no');
-  if (n) this.show(n);
+  if (n) this.show(n - 1);
 };
 
 /**
