@@ -2,7 +2,7 @@
   "name": "pager",
   "repo": "isner/pager",
   "description": "Pager ui component",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "keywords": ["pager", "ui", "paginate", "pagination"],
   "dependencies": {
     "component/emitter": "*",

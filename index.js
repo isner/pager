@@ -45,7 +45,8 @@ Pager.prototype.onclick = function(e){
   var el = o(e.target).parent();
   if (el.hasClass('prev')) return this.prev();
   if (el.hasClass('next')) return this.next();
-  this.show(el.text() - 1);
+  var n = el.getAttribute('data-no');
+  this.show(n);
 };
 
 /**
@@ -143,8 +144,8 @@ Pager.prototype.total = function(n){
 Pager.prototype.createPageLink = function(i){
   var n = i + 1;
   return this.current == i
-    ? '<li class="pager-page pager-active"><a href="#"><span class="clipped">current page </span>' + n + '</a></li>'
-    : '<li class="pager-page"><a href="#"><span class="clipped">page </span>' + n + '</a></li>';
+    ? '<li class="pager-page pager-active" data-no="' + n + '"><a href="#"><span class="clipped">current page </span>' + n + '</a></li>'
+    : '<li class="pager-page" data-no="' + n + '"><a href="#"><span class="clipped">page </span>' + n + '</a></li>';
 };
 
 /**
